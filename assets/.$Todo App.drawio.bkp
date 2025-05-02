@@ -1,0 +1,79 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="mcFEHCJCBisjLm0zFtCB">
+    <mxGraphModel dx="1674" dy="1204" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-1" value="Command Line Interface todo app" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="570" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-2" value="./a Draft meeting Agenda for tomorrow &amp;gt; Ask John for report &amp;gt; Ask Sarah for report -&amp;nbsp;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+          <mxGeometry x="610" y="360" width="370" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-4" value="./a Project: New Company" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="570" y="280" width="370" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-5" value="./a Draft meeting Agenda for tomorrow -Ask John for report - Ask Sarah for report -&amp;nbsp;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+          <mxGeometry x="610" y="1170" width="370" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-6" value="./a Draft meeting Agenda for tomorrow 10:30 -Ask John for report - Ask Sarah for report -&amp;nbsp;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+          <mxGeometry x="610" y="1260" width="370" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-7" value="./a Project: Second Company" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="570" y="1090" width="370" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-8" value="[Spacing]Project: New Company [Spacing]&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;-&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Draft Agenda for meeting Tomorrow&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;*&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;[ ]&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Ask John for marketing report&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;*&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;[ ]&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Ask Sarah for R&amp;amp;D report&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;-&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Contact contractor {tomorrow} {10:30}&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;*&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;[ ]&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Inventory Inquiry&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;*&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;[ ]&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Manufacturing Updates&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;-&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;[ ]&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;(Pods)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;-&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;[ ]&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;(Machines&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;*&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;[ ]&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Delivery Updates&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- [ ] (Milk Frothers)&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- &lt;b&gt;Urgent Issue&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;gt; Dont forget&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;horizontal=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="1050" y="281" width="270" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-9" value="The primary directive is editing the most recent project&amp;nbsp;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="1010" y="210" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-10" value="Right alligned text [centering title]&lt;div&gt;- Keeping track of text span [line wrapping]&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="1370" y="280" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-11" value="Parsing inputs&lt;div&gt;- Time - Date - Structure&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="1360" y="350" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-12" value="./a &amp;gt;&amp;gt; !Urgent Issue &amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; Dont forget" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+          <mxGeometry x="610" y="540" width="370" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-13" value="./a &amp;gt; Contact contractor tomorrow 10:30 &amp;gt;&amp;gt; Inventory Inquiry &amp;gt;&amp;gt; Manufacturing Updates &amp;gt;&amp;gt;&amp;gt; (pods) &amp;gt;&amp;gt;&amp;gt; (machines) &amp;gt;&amp;gt; Delivery Updates &amp;gt;&amp;gt;&amp;gt; (Milk frothers)&amp;nbsp;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+          <mxGeometry x="610" y="450" width="370" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-14" value="Collapse structures with no parents" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="1350" y="420" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-15" value="./a edit&amp;nbsp;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+          <mxGeometry x="600" y="630" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-16" value="Basic Functions" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1515" y="160" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-17" value="Intermediate Functions" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1900" y="160" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-18" value="Direct Search via Tries (Prefex Trees)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="1760" y="280" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-19" value="Advanced&lt;div&gt;Functions&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2270" y="160" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-20" value="Fuzzy Search (Murkov Trees?)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="2160" y="280" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-23" value="./a move" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+          <mxGeometry x="600" y="700" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-24" value="./a delete task" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+          <mxGeometry x="600" y="770" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-25" value="./a delete project" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+          <mxGeometry x="570" y="840" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-pjJ20z52hsrF8x9zmJR-26" value="./a save backup [name]" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+          <mxGeometry x="570" y="910" width="300" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
