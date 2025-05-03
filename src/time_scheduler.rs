@@ -57,17 +57,21 @@ impl Project
               //clear buffer
               //reset level count
               if !selecting_level{
-                last_level = level_count;
                 if last_level == 0 {
-                  partitioned_tasks.push((1, buff.clone()));
-                  buff.clear();
-                }else {
-                  partitioned_tasks.push((last_level, buff.clone()));
-                  buff.clear();
-                  level_count = 0;
+                  last_level = 1;
+                  
+                }else if last_level + 1< level_count{
+                  last_level = last_level +1;
+                }else { // 1 greater or less than
+                  last_level = level_count;
                 }
+                // println!("\"{}\" [{:?}]",&buff,&partitioned_tasks.last().unwrap_or(&(0_usize,String::new())));
+                partitioned_tasks.push((last_level, buff.clone()));
+                buff.clear();
+                level_count = 1;
+              }else {
+                level_count+= 1;
               }
-              level_count+= 1;
               selecting_level = true;
             },
             _ => {
@@ -75,6 +79,8 @@ impl Project
               buff.push(char);
             }
           }
+
+          
         }
         Some(partitioned_tasks)
       },
@@ -85,7 +91,7 @@ impl Project
     };
 
     let new_proj = Project{
-      project_id:current_index,
+      project_id:current_index+1,
       project_name:proj_name,
       leader        :leader,
       deadline      :deadline,
@@ -135,7 +141,7 @@ impl fmt::Display for Project{
 
 
 /// This is a CLI interface for the time_scheduler module
-pub fn menu()
+pub fn wrapper(args:&mut Vec<String>)
 {
   //const BLANK:u8 = 0b00000001;  // Here by using a while 9 bytes anyway?
   //const BLANK:u8 = 0b00000010;  // Here by using a while 9 bytes anyway?
@@ -150,35 +156,41 @@ pub fn menu()
 
   let pad = " ".repeat(2);
   let mut exit = false;
-  let mut user_input = String::from("");
+  let mut command = String::from("");
   let mut num_projects = 0_u8;
-  println!("Welcome!\nWhere would you like to start?"); // preliminary print
-  println!("Commands: New Project, Help, Exit");
+  // println!("Welcome!\nWhere would you like to start?"); // preliminary print
+  // println!("commands: New, Help, Exit");
 
   while !exit{
-    io::stdin()
-      .read_line(&mut user_input)
-      .expect("Purpose: Reads user input for time_scheduler menu\n Error: Failed to read line!");
-    
-    match user_input
+    if args.is_empty(){
+      println!("How would you like to continue?");
+      println!("commands: New, Help, Exit\n");      // levels to commands?
+      io::stdin()
+        .read_line(&mut command)
+        .expect("Purpose: Reads user input for time_scheduler menu\n Error: Failed to read line!");
+    }else {
+      command = args.pop().unwrap();
+      dbg!(&command);
+    }
+    match command
       .trim()
       .to_ascii_lowercase()
     .as_str(){
-      "new project" => {
-        user_input.clear();
+      "new" => {
+        command.clear();
         println!("Project Format:\n[Project Name], [Leader], [Deadline], [Priority: High, Mid, Low], [>tasks >> sub tasks]");
         io::stdin()
-      .read_line(&mut user_input)
+      .read_line(&mut command)
       .expect("Purpose: Read input to create project.\n Error: Unable to read line!");
         // format: 
 
-        let partitions:Vec<&str> = user_input.split(",").collect();
+        let partitions:Vec<&str> = command.split(",").collect();
         
         if partitions.len() < 4{
           println!("Insufficient Elements: {:?}", partitions);
         }
         else {
-          assert!( partitions.len() >= 4, "Purpose: Creating valid new project.\n Error: Insufficient elements");
+          assert!( partitions.len() >= 4, "Purpose: Creating valid new project.\n Error: Insufficient elements"); //idiot proof
           let proj_name =  partitions[0].to_owned();
           let lead_name =  partitions[1].to_owned();
           let dead_line =  partitions[2].to_owned();
@@ -208,43 +220,87 @@ pub fn menu()
       },
       "help" => 
       {
-        let help_message = format!(
-              "\tNew Project\n
-          {pad}- Container to fuel productivity\n
-          {pad}- Create a project with the new project command to get started\n
-          {pad}- Follow the following prompts to continue\n
-              \tExit",);
+        let title_pad = pad.repeat(3);
+        let mut help_message = String::from("\n");
+        help_message = format!("{help_message}{title_pad}{}","\tNew Project\n");
+        help_message = format!("{help_message}{pad}{}","Containers to fuel productivity\n",);
+        help_message = format!("{help_message}{pad}{pad}{}","- Create a project with the new command to get started\n",);
+        help_message = format!("{help_message}{pad}{pad}{}","- Follow the prompts to continue\n",);
+        help_message = format!("{help_message}{title_pad}{}","\tExit");
         println!("{help_message}");
       },
       "test" =>{
-        num_projects += 1;
-        let proj = Project{
-          project_id:0,
-          project_name:"Name of proj".into(),
-          leader:"me".into(),
-          deadline:"tomorrow".into(),
-          prio:"high".into(),
-          tasks:Some(
-            vec![
-              (0,"Set up project structure".into()),
-              (1,"Define core requirements".into()),
-              (2,"Design initial UI mockups".into()),
-              (3,"Implement basic functionality".into()),
-              (4,"Write unit tests".into()),
-              (1,"Review and refactor code".into()),
-              (2,"Deploy to staging environment".into()),
-            ]
-          )
-        };
+        let test_pad = "#".repeat(8);
+        println!("\n{test_pad}INITIALISING TEST {test_pad}\n");
 
-        println!("{}",proj);
+        let mut task_list = String::new();
+        task_list = format!("{task_list}{}","> Set up project structure");
+        task_list = format!("{task_list}{}",">> Define core requirements");
+        task_list = format!("{task_list}{}",">>> Design initial UI mockups");
+        task_list = format!("{task_list}{}",">>>> Implement basic functionality");
+        task_list = format!("{task_list}{}",">>>>>>>>> Write unit tests");
+        task_list = format!("{task_list}{}",">> Review and refactor code");
+        task_list = format!("{task_list}{}",">>> Deploy to staging environment");
+
+        let (proj1, num_projects) = Project::new(
+          num_projects,
+          "First Project".into(),
+          "Leader A".into(),
+          "Tomorrow".into(),
+          "high".into(),
+          Some(task_list.clone()),
+        );
+        let mut task_list = String::new();
+        task_list = format!("{task_list}{}",">>>> Set up project structure");
+        task_list = format!("{task_list}{}",">>> Define core requirements");
+        task_list = format!("{task_list}{}",">> Design initial UI mockups");
+        task_list = format!("{task_list}{}",">>>> Implement basic functionality");
+        task_list = format!("{task_list}{}",">>>>>>>>> Write unit tests");
+        task_list = format!("{task_list}{}",">> Review and refactor code");
+        task_list = format!("{task_list}{}",">>> Deploy to staging environment");
+
+        let (proj2, num_projects) = Project::new(
+          num_projects,
+          "Second Project".into(),
+          "Leader B".into(),
+          "Tuesday".into(),
+          "low".into(),
+          Some(task_list),
+        );
+
+        let mut task_list = String::new();
+        task_list = format!("{task_list}{}",">>>>>>> Set up project structure");
+        task_list = format!("{task_list}{}",">>>>>> Define core requirements");
+        task_list = format!("{task_list}{}",">>>>> Design initial UI mockups");
+        task_list = format!("{task_list}{}",">>>> Implement basic functionality");
+        task_list = format!("{task_list}{}",">>> Write unit tests");
+        task_list = format!("{task_list}{}",">> Review and refactor code");
+        task_list = format!("{task_list}{}","> Deploy to staging environment");
+
+        let (proj3, num_projects) = Project::new(
+          num_projects,
+          "Second Project".into(),
+          "Leader B".into(),
+          "Tuesday".into(),
+          "low".into(),
+          Some(task_list),
+        );
+        
+        let projects: Vec<Project> = vec![proj1,proj2,proj3];
+
+        for (index,proj) in projects.iter().enumerate(){
+          println!("Project {}: {}\n",index + 1, *proj);
+
+        }
+        // println!("Project 2: {}\n",proj2);
+        println!("{test_pad}TESTING COMPLETE{test_pad}\n")
       },
       _=>
       {
         println!("I'm sorry I didn't catch that. Try Help for more options");
       }
     }
-    println!("How would you like to continue?");
-    user_input.clear();
+    
+    command.clear();
   }
 }
