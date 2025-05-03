@@ -1,10 +1,11 @@
 
 
-// use std::env;
+use std::env;
 
 mod time_scheduler;
 
 #[allow(unused_variables)]
 fn main() {
-    time_scheduler::menu();
+    let mut args: Vec<String> = env::args().skip(1).rev().collect();
+    time_scheduler::menu(&mut args);
 }
